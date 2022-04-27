@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+table, th, td{
+    font: normal 45px arial;
+    column-width:  700px;
+    background-color: #e2e2e2;
+    border: 8px solid #ffffff;
+    padding: 2px;
+    border-collapse: collapse;
+}
+body{
+    font: normal 32px arial;
+}
+.linha-vertical{
+    border-left: thick solid #5f5d5d;
+    height: 100%;
+    left: 50%;
+    position: relative;
+}
+.h1{
+    font-family: 'Open Sans', sans-serif;
+}
+.cabeçalho{
+    padding-top: 18px;
+    padding-bottom: 28px;
+    background: linear-gradient( 68.15deg, #3f5be7 16.62%, #0724b6 85.61% );
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cabeçalho-img{
+    padding: 15px;
+    height: 75px;
+}
+.senha-guiche{
+    font-size: 50px;
+    padding: 35px;
+    padding-left: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #5f5d5d;
+}
+.senha{
+    padding-left: 30%;
+}
+.guiche{
+    padding-right: 13%;
+}
+.numero-tabela{
+    padding-left: 8%;
+    font-size: 260px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: linear-gradient( 68.15deg, #3856f0 16.62%, #0521aa 85.61% );
+    color: gold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.M-08{
+    text-shadow:1px 5px white;
+}
+.N-02{
+    text-shadow: 1px 5px white;
+}
+.senhas-anteriores{
+    padding: 15px;
+    padding-right: 31%;
+    font-size: 35px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #646363;
+}
+.tabela-1{
+    padding-right: 22%;
+}
