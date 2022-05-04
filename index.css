@@ -6,6 +6,16 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+.horizontal{
+    height: 5px ;border:0;
+    background: black;
+}
+.vertical {
+    border-left: 5px solid rgba(219, 217, 217, 0.509);
+    height: 99%;
+    position: absolute;
+    left: 74%;
+}   
 table, th, td{
     font: normal 45px arial;
     column-width:  700px;
@@ -16,6 +26,7 @@ table, th, td{
 }
 body{
     font: normal 32px arial;
+    border-inline-color: #5f5d5d 2px ;
 }
 .linha-vertical{
     border-left: thick solid #5f5d5d;
@@ -35,12 +46,11 @@ body{
     align-items: center;
 }
 .cabeçalho-img{
-    padding: 15px;
-    height: 75px;
+    height: 74px;
 }
 .senha-guiche{
-    font-size: 50px;
-    padding: 35px;
+    font-size: 56px;
+    padding: 32px;
     padding-left: 12px;
     display: flex;
     flex-direction: row;
@@ -48,16 +58,16 @@ body{
     color: #5f5d5d;
 }
 .senha{
-    padding-left: 30%;
+    padding-left: 32%;
 }
 .guiche{
-    padding-right: 13%;
+    padding-right: 5%;
 }
 .numero-tabela{
-    padding-left: 8%;
-    font-size: 260px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-left: 16%;
+    font-size: 250px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     background: linear-gradient( 68.15deg, #3856f0 16.62%, #0521aa 85.61% );
     color: gold;
     display: flex;
@@ -65,19 +75,21 @@ body{
     justify-content: space-around;
 }
 .M-08{
+    padding-right: 360px;
     text-shadow:1px 5px white;
 }
 .N-02{
     text-shadow: 1px 5px white;
 }
 .senhas-anteriores{
-    padding: 15px;
-    padding-right: 31%;
-    font-size: 35px;
+    padding: 9px;
+    padding-top: 1%;
+    padding-right: 32%;
+    font-size: 37px;
     display: flex;
     justify-content: space-evenly;
     color: #646363;
 }
 .tabela-1{
-    padding-right: 22%;
+    padding-right: 20%;
 }
