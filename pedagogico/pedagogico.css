@@ -5,6 +5,11 @@
   }
 
 
+  a{
+    text-decoration: none;
+  }
+
+
 
   header {
     margin-top: 20px;
@@ -26,7 +31,7 @@
 }
 
 
-.btn-matricula{
+.btn-pedagogico{
   display: block;
   margin: 0 auto;
   margin-top: 60px;
@@ -35,6 +40,7 @@
   font-size: 25px;
   font-weight: bold;
   width: 250px;
+  height: 60px;
   border-radius: 15px;
   border: 3px solid #919191;
   background-color: #343D93;
@@ -44,7 +50,7 @@
 
 .seta{
   background-color: #343D93;
-  width: 60px;
+  width: 70px;
   color: white;
   border: 3px solid #919191;
   font-size: 50px;
