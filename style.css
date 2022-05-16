@@ -1,14 +1,17 @@
-.body{
-    background-color: #ffff00;
+
+.container{
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(156, 182, 238, 0.267));
+    background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
+    height: 100vh;
 }
 
 
-.welcome{
+/* .welcome{
     padding-top: 35px;
     padding-left: 65px;
-}
+} */
 
 .unidade{
     padding-left: 65px;
@@ -29,50 +32,80 @@
     margin-right: 58px;
 }
 
-.box {
-    position: relative;
-    background-color: #ffc400;
+.boxG {
+    /* position: relative; */
+    background-color: rgba(0, 0, 255, 0.623);
+    color: #fff;
+    border: 10px solid outset;
+    box-shadow: 5px 2px 2px rgb(56, 56, 56);
 	width: 250px;
 	height: 250px;
-	margin: auto;
+	/* margin: auto; */
 	text-align: center;
-    right: 770px;
+    /* right: 770px; */
+    cursor: pointer;
     
 }
+
+
 
 .numero{
     font-size: 130px;
 }
 
-.botao{
-    position: relative;
-    left: 430px;
-    bottom: 200px;
-}
 
 .chamar{
+    display: block;
     height: 100px;
-    width: 25%;
-}
-
-.fila{
-    padding-left: 65px;
+    width: 35rem;
     position: relative;
-    top: 100px;
+    /* left: 400px; */
+    bottom: 160px;
 }
 
+.btn-chamar{
+    background-color: #d400ff;
+    color:black;
+    height: 150px;
+    width: 400px;
+    font-size: 2rem;
+    font-weight: bolder;
+    border-radius: 8px;
+}
+
+.btn-chamar:hover{
+    background-color: #3700ffc5;
+    color: black;
+}
 .andamento{
     visibility:hidden;
 }
 
-.tabela{
-    position: relative;
-    left: 460px;
-    bottom: 290px;
+
+.btn-atd{
+    background-color: rgba(0, 0, 0, 0.322);
 }
 
-tr:hover {background-color: coral;}
+.table{
+    line-height: 15px;
+    text-indent: 1px;
+    width: 70%;
+}
 
-.fontetabela{
-    font-size: 26px;
+.btn-atd:houver{
+    background-color: aqua;
+    font-weight: bolder;
+}
+
+btn-encerrar{
+    background-color: red;
+}
+
+
+.teste{
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(181, 204, 255));
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    height: 100vh;
 }
