@@ -23,7 +23,7 @@
 </head>
 
 
-<body>
+<body class="container">
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <img class="imagem" src="/img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
@@ -35,7 +35,7 @@
     </nav>
 
 
-    <div class="container">
+    <div>
 
         <h5><a href="index.html">Inicio</a></h5>
         <h3 class="">ATENDIMENTO</h3>
@@ -62,7 +62,14 @@
 
             <div class="col-md-9 mt-2">
                 <h3>Servico Realizado</h3>
-                <li>Matricula</li>
+                <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Ensira o servico realizado</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Servico realizado">
+                      <small id="emailHelp" class="form-text text-muted">Por favor, insira o servico realizado.</small>
+                    </div>
+                  </form>
+                  
                 <!-- Button to Open the Modal -->
                 <button type="button" class="btn btn-danger col-md-9 mt-5" data-bs-toggle="modal" data-bs-target="#myModal">
                     Encerrar Atendimento</button>
