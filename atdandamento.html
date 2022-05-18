@@ -23,22 +23,32 @@
 </head>
 
 
-<body>
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-      <img class="imagem" src="logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-      </form>
-    </div>
-  </nav>
-
-
+<body class="container">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="index.html" role="tab" aria-controls="home"
+        aria-selected="true"><img src="https://senaies.com.br/wp-content/uploads/2019/11/logo_senai_novo.svg"
+          alt="Senai - ES" class="logo-img" style="height: 32px"></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="atendimento.html" role="tab" aria-controls="profile"
+        aria-selected="false">Atendimento</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="monitor.html" role="tab" aria-controls="contact"
+        aria-selected="false">Monitor</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="triagem.html" role="tab" aria-controls="contact"
+        aria-selected="false">Triagem</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="configuracao.html" role="tab" aria-controls="contact"
+        aria-selected="false">Configuracao</a>
+    </li>
+  </ul>
   <div class="container">
-
-    <h5><a href="index.html">Inicio</a></h5>
-    <h3 class="">ATENDIMENTO</h3>
+    <h3 class="mt-5">ATENDIMENTO</h3>
     <p class="mb-5">Efetue os atendimentos às senhas distribuidas dos servicos que voce atende</p>
     <div class="row">
 
@@ -57,7 +67,7 @@
 
         </div>
       </div>
-      
+
 
 
       <div class="col-md-9 mt-2">
@@ -97,7 +107,8 @@
           Novamente</button>
         <button class="btn  btn-block btn-atd" onclick="iniciarAtendimento()"><i class="fas fa-play fa-fw"></i> Iniciar
           Atendimento </button>
-        <button class="btn  btn-block btn-atd" onclick="encerrarAtendimento()"><i class="fas fa-ban"></i> Nao Compareceu</button>
+        <button class="btn  btn-block btn-atd" onclick="encerrarAtendimento()"><i class="fas fa-ban"></i> Nao
+          Compareceu</button>
       </div>
 
     </div>

@@ -24,21 +24,31 @@
 
 
 <body class="container">
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <img class="imagem" src="/img/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-            </form>
-        </div>
-    </nav>
-
-
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="index.html" role="tab" aria-controls="home"
+                aria-selected="true"><img src="https://senaies.com.br/wp-content/uploads/2019/11/logo_senai_novo.svg"
+                    alt="Senai - ES" class="logo-img" style="height: 32px"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="atendimento.html" role="tab"
+                aria-controls="profile" aria-selected="false">Atendimento</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="monitor.html" role="tab"
+                aria-controls="contact" aria-selected="false">Monitor</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="triagem.html" role="tab"
+                aria-controls="contact" aria-selected="false">Triagem</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="configuracao.html" role="tab"
+                aria-controls="contact" aria-selected="false">Configuracao</a>
+        </li>
+    </ul>
     <div>
-
-        <h5><a href="index.html">Inicio</a></h5>
-        <h3 class="">ATENDIMENTO</h3>
+        <h3 class="mt-5">ATENDIMENTO</h3>
         <p class="mb-5">Efetue os atendimentos às senhas distribuidas dos servicos que voce atende</p>
         <div class="row">
 
@@ -64,14 +74,17 @@
                 <h3>Servico Realizado</h3>
                 <form>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Ensira o servico realizado</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Servico realizado">
-                      <small id="emailHelp" class="form-text text-muted">Por favor, insira o servico realizado.</small>
+                        <label for="exampleInputEmail1">Ensira o servico realizado</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Servico realizado">
+                        <small id="emailHelp" class="form-text text-muted">Por favor, insira o servico
+                            realizado.</small>
                     </div>
-                  </form>
-                  
+                </form>
+
                 <!-- Button to Open the Modal -->
-                <button type="button" class="btn btn-danger col-md-9 mt-5" data-bs-toggle="modal" data-bs-target="#myModal">
+                <button type="button" class="btn btn-danger col-md-9 mt-5" data-bs-toggle="modal"
+                    data-bs-target="#myModal">
                     Encerrar Atendimento</button>
 
                 <!-- The Modal -->
@@ -92,23 +105,24 @@
 
                             <!-- Modal footer -->
                             <div class="modal-footer">
-                                <button class="btn  btn-block btn-danger" onclick="encerrarAtendimento()"><i class="fas fa-ban"></i> Encerrar</button>
-                            </div>
+                                <button class="btn  btn-block btn-danger" onclick="encerrarAtendimento()"><i
+                                        class="fas fa-ban"></i> Encerrar</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="my-5">
-                    <h4>Minha fila (todos):</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item"> A0040</li>
-                        <li class="list-group-item"> A0041</li>
-                        <li class="list-group-item"> M0021</li>
-                        <li class="list-group-item"> F0001</li>
-                    </ul>
-                </div>
+            </div>
+            <div class="my-5">
+                <h4>Minha fila (todos):</h4>
+                <ul class="list-group">
+                    <li class="list-group-item"> A0040</li>
+                    <li class="list-group-item"> A0041</li>
+                    <li class="list-group-item"> M0021</li>
+                    <li class="list-group-item"> F0001</li>
+                </ul>
             </div>
         </div>
+    </div>
     </div>
 
     <script src="/script.js"></script>
