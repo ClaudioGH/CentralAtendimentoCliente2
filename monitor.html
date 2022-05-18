@@ -20,7 +20,7 @@
 <body class="container">
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <img class="imagem" src="../NEW CAC/img/logo.png" alt="" width="30" height="24"
+      <img class="imagem" src="./logo.png" alt="" width="30" height="24"
         class="d-inline-block align-text-top">
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -36,8 +36,8 @@
     <h3>Buscar Senha</h3>
   </div>
   <div class="input-group">
-    <input type="search" class="form-control rounded" placeholder="Buscar senha" aria-label="Search" aria-describedby="search-addon" />
-    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#myModal">Buscar</button>
+    <input type="text" id="campo-texto" class="form-control rounded" placeholder="Buscar senha" aria-label="Search" aria-describedby="search-addon" />
+    <button type="button" class="btn btn-outline-success" onclick="salvar();">Salvar</button>
 
     <div class="modal" id="myModal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
@@ -97,5 +97,7 @@
     </ul>
   </div>
 </body>
+
+<script type="text/javascript" src="script.js"></script>
 
 </html>

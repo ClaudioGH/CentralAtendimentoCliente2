@@ -1,0 +1,52 @@
+ <div class="input-group">
+    <input type="search" class="form-control rounded" placeholder="Buscar senha" aria-label="Search" aria-describedby="search-addon" />
+    <button type="button" class="btn btn-outline-success" onclick="buscarSenha" data-bs-toggle="modal" data-bs-target="#myModal">Buscar</button>
+
+    <div class="modal" id="myModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Senha</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Senha</th>
+                  <th scope="col"> </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Numero</th>
+                  <td>A0015</td>
+                </tr>
+                <tr>
+                  <th scope="row">Prioridade</th>
+                  <td>--</td>
+                </tr>
+                <tr>
+                  <th scope="row">Servico</th>
+                  <td>Atendimento</td>
+                </tr>
+                <tr>
+                  <th scope="row">Data de chegada</th>
+                  <td>15/05/2023  12:32:52</td>
+                </tr>
+                <th scope="row">Situacao</th>
+                  <td>Emitido</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Transferir/Alterar Senha</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar Senha</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
