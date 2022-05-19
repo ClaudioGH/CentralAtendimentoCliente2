@@ -1,6 +1,6 @@
 
 function myFunction(){
-    location.href = "/atdandamento.html"
+    location.href = "/views/atdandamento.html"
 }
 
 function iniciarAtendimento(){
@@ -20,4 +20,5 @@ function salvar() {
             const bot = document.getElementById("campo-texto");
             localStorage.setItem("senha", bot.value)
             alert(localStorage.getItem("senha"))
- }
+}
+
