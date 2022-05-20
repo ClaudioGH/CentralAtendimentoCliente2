@@ -1,20 +1,25 @@
 
         function GetData() {
 
-            const bot = document.getElementById("campo-texto");
             //localStorage.setItem("senha", bot.value)
             //alert(bot.value)
 
-            const uri = 'https://central-atendimento-cliente.herokuapp.com/api/atendimento/post';
-                    const initDetails = {
-                        method: 'post',
-                        headers: {
-                            "Content-Type": "application/json; charset=utf-8"
-                        },
-                        mode: "cors"
-                    }
+            const endPoint = 'https://central-atendimento-cliente.herokuapp.com/api/';
+            const route = 'atendimento/post';
+            const cpf = document.getElementById("campo-texto").value;
+            const sufixo_atendimento = 'FCR';
+            const date = '?' + 'cpf=' + cpf + '&' + 'sufixo_atendimento=' + sufixo_atendimento;
 
-            fetch((uri +bot.value), initDetails )
+
+            const initDetails = {
+                method: 'post',
+                headers: {
+                    "Content-Type": "application/json; charset=utf-8"
+                },
+                mode: "cors"
+            }
+            
+            fetch((endPoint + route + date), initDetails )
                 .then( response =>
                 {
                     if ( response.status !== 200 )
@@ -31,7 +36,6 @@
                 {
                     console.log( JSON.stringify( myJson ) );
                     alert( JSON.stringify( myJson ) )
-                    localStorage.setItem("requestResponse", JSON.stringify( myJson ));
                 } )
                 .catch( err =>
                 {
