@@ -1,3 +1,11 @@
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <script>
 
         function GetData() {
 
@@ -38,3 +46,12 @@
                     console.log( 'Fetch Error :-S', err );
                 } );
         }
+    </script>
+
+    <input type="text" id="campo-texto" class="form-control rounded" placeholder="Data" aria-label="Search" aria-describedby="search-addon" />
+
+    <button id='getData' onclick="GetData()">Get Data</button>
+
+</body>
+
+</html>
