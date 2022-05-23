@@ -16,10 +16,6 @@
     padding-left: 65px;
 }
 
-.botao img{
-    float: center;
-}
-
 .nomes p{
     display: inline-block;
     padding-left: 65px;
@@ -59,20 +55,14 @@
 
 
 
-.btn-teste{
-    background-color: aqua;
-}
-
-
-
 .btn-chamar:hover{
-    background-color: #3700ffc5;
+    background-color: rgba(45, 45, 223, 0.623);
     color: black;
 }
 
 
 .btn-chamar{
-    background-color: #3700ffc5;
+    background-color: rgba(0, 0, 255, 0.623);
     color:black;
     height: 150px;
     width: 400px;
@@ -81,9 +71,6 @@
     border-radius: 8px;
 }
 
-.andamento{
-    visibility:hidden;
-}
 
 
 .btn-atd{
@@ -105,14 +92,6 @@ btn-encerrar{
     background-color: red;
 }
 
-
-.teste{
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(181, 204, 255));
-    background-repeat: no-repeat;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
-    height: 100vh;
-}
 
 .progresso {
     position: absolute;
