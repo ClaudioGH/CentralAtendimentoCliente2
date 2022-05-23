@@ -113,3 +113,16 @@ btn-encerrar{
     overflow: hidden;
     height: 100vh;
 }
+
+.progresso {
+    position: absolute;
+    left: 40px;
+    display: block;
+    margin: 0 auto;
+    height: 150px;
+    width: 100%;
+    background-image: url('/img/progresso.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 999;
+}

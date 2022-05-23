@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="/css/style.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
@@ -14,6 +14,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 
 </head>
 
@@ -48,67 +50,23 @@
     <h3>Buscar Senha</h3>
   </div>
   <div class="input-group">
-    <input type="text" id="campo-texto" class="form-control rounded" placeholder="Buscar senha" aria-label="Search" aria-describedby="search-addon" />
-    <button type="button" class="btn btn-outline-success" onclick="getUsers()">Salvar</button>
-
-    <div class="modal" id="myModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Senha</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Senha</th>
-                  <th scope="col"> </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Numero</th>
-                  <td>A0015</td>
-                </tr>
-                <tr>
-                  <th scope="row">Prioridade</th>
-                  <td>--</td>
-                </tr>
-                <tr>
-                  <th scope="row">Servico</th>
-                  <td>Atendimento</td>
-                </tr>
-                <tr>
-                  <th scope="row">Data de chegada</th>
-                  <td>15/05/2023 12:32:52</td>
-                </tr>
-                <th scope="row">Situacao</th>
-                <td>Emitido</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Transferir/Alterar Senha</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar Senha</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <input type="date" id="data-atendimento" class="form-control rounded" placeholder="Buscar senha" aria-label="Search" aria-describedby="search-addon" />
+    <button type="button" id="btn-buscar" class="btn btn-outline-success" onclick="GetFila()"><i class="fa fa-search fa-fw"></i> Buscar</button>
   </div>
   <div class="my-5">
+    <div id="progresso" class="p-2"></div>
+
     <h4>Minha fila (todos):</h4>
-    <ul class="list-group">
-      <li class="list-group-item"> A0040</li>
-      <li class="list-group-item"> A0041</li>
+    <ul id="fila_espera" class="list-group">
+      <li class="list-group-item">Clique no botão listar para obter a lista de atendimento do dia...</li>  
+      <!-- <li class="list-group-item"> A0040</li> -->
+      <!-- <li class="list-group-item"> A0041</li>
       <li class="list-group-item"> M0021</li>
-      <li class="list-group-item"> F0001</li>
+      <li class="list-group-item"> F0001</li> -->
     </ul>
   </div>
 </body>
+
 
 <script type="text/javascript" src="/js/script.js"></script>
 
