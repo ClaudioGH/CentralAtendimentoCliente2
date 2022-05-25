@@ -53,6 +53,10 @@
     bottom: 160px;
 }
 
+.tabelaProx{
+    position: absolute;
+    left: 30%;
+}
 
 
 .btn-chamar:hover{

@@ -1,18 +1,14 @@
 
-function myFunction(){
-    location.href = "/atdandamento.html"
+function chamarSenha(){
+    location.href = "atdandamento.html"
 }
 
-function chamarProx(){
-    location.href= "/resources/views/atdandamento.html"
-}
-
-function iniciarAtendimento(){
-    location.href = "views/iniciaratendimento.html"
+ function iniciarAtendimento(){
+    location.href = "iniciaratendimento.html"
 }
 
 function encerrarAtendimento(){
-    location.href = "/atendimento.html"
+    location.href = "atendimento.html"
 }
 
 function buscarSenha(){
@@ -98,6 +94,8 @@ function GetFila(){
         r.forEach(e => {
 
              itemLista.innerHTML += `<li class="list-group-item">${e.numero_atendimento}${e.sufixo_atendimento}</li>`;
+
+             console.log(itemLista)
         
       
              loader.classList.remove("progresso");
@@ -115,3 +113,42 @@ function GetFila(){
     
 
 }
+
+function atendimentosqueueNext(){
+
+        //localStorage.setItem("senha", bot.value)
+        //alert(bot.value)
+        itemLista = document.getElementById("proximo");
+        const endPoint = 'https://central-atendimento-cliente.herokuapp.com/api/';
+        const route = 'atendimentos/queue/next';
+        itemLista.innerHTML = "";
+
+        const initDetails = {
+            method: 'get',
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            },
+            mode: "cors"
+        }
+        fetch((endPoint + route), initDetails )
+            .then( response =>{
+                itemLista.innerHTML += `<li class="list-group-item"> Senha:  ${response.numero_atendimento}${response.sufixo_atendimento}</li>`;
+                itemLista.innerHTML += `<li class="list-group-item"> Data e Hora da Emissao:  ${response.date_time_emissao_atendimento}`;
+                itemLista.innerHTML += `<li class="list-group-item"> CPF:  ${response.cpf}`;
+                itemLista.innerHTML += `<li class="list-group-item"> Observacoes:  ${response.observacoes}`;
+                if ( response.status !== 200 )
+                {
+                    console.log( 'Looks like there was a problem. Status Code: ' +
+                        response.status );
+                    return;
+                }
+                console.log( response.headers.get( "Content-Type" ) );
+                return response.json();
+            }
+            ).then( myJson =>
+            {   
+                console.log( JSON.stringify( myJson ) );
+            } )
+        
+}
+

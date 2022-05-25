@@ -23,7 +23,7 @@
 </head>
 
 
-<body class="container">
+<body class="container" onload="atendimentosqueueNext()">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" id="home-tab" data-toggle="tab" href="/index.html" role="tab" aria-controls="home"
@@ -47,7 +47,7 @@
         aria-selected="false">Configuracao</a>
     </li>
   </ul>
-  <div class="container">
+  <div>
     <h3 class="mt-5">ATENDIMENTO</h3>
     <p class="mb-5">Efetue os atendimentos às senhas distribuidas dos servicos que voce atende</p>
     <div class="row">
@@ -57,58 +57,23 @@
         <div class="boxG p-2">
           <h5>Guichê</h5>
           <h1 class="numero">1</h1>
-
           <select class="form-control">
             <option value="0">Alterar:</option>
             <option value="1">Guiche 1</option>
             <option value="2">Guiche 2</option>
             <option value="3">Guiche 3</option>
           </select>
-
         </div>
       </div>
-
-
-
-      <div class="col-md-9 mt-2">
-        <div class="">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Senha</th>
-                <th scope="col">Servico</th>
-                <th scope="col">Prioridade</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>M0020</td>
-                <td>Matricula</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>A0039</td>
-                <td>Atestado</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>A0038</td>
-                <td>Atestado</td>
-                <td>2</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <button class="btn  btn-block btn-atd" onclick="myFunction()"><i class="fas  fa-bullhorn fa-fw"></i> Chamar
+      <div class="tabelaProx">
+        <ul id="proximo"></ul>
+        <button class="btn btn-block btn-atd" onclick="myFunction()"><i class="fas  fa-bullhorn fa-fw"></i> Chamar
           Novamente</button>
         <button class="btn  btn-block btn-atd" onclick="iniciarAtendimento()"><i class="fas fa-play fa-fw"></i> Iniciar
           Atendimento </button>
         <button class="btn  btn-block btn-atd" onclick="encerrarAtendimento()"><i class="fas fa-ban"></i> Nao
           Compareceu</button>
+
       </div>
 
     </div>
