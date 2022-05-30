@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="/tela.js"></script>
+    <script src="/resources/js/index.js"></script>
     
     <link rel="stylesheet" href="/financeiro/financeiro.css">
+    <link rel="stylesheet" href="/resources/css/style.css">
     
     <title>Financeiro</title>
 </head>
@@ -18,25 +20,23 @@
     <div class="container">
 
         <div class="d-flex  justify-content-center  align-items-center w-100 my-5">
-
-            
-                <a href="/tela.html" class="d-flex jutify-center"><i class="icone-seta">⇽</i></a>
-                <img src="/img/download.png"  class="img-thumbnail" alt="">
-            
-            
+            <a href="/tela.html" class="d-flex jutify-center"><i class="icone-seta">⇽</i></a>
+            <img src="/resources/css/img/logo_senai_novo.svg" alt="logo_senai.svg">
         </div>
+        <div class="setor">
+            <h1>Financeiro</h1>
+        </div>
+        <br>
 
         <div class="cont-text">
-            <h2 class="text">Financeiro</h2>
-            <h2 class="text">Servicos prestados</h2>
+            <h1 class="text">Servicos prestados</h1>
             <h2 class="text">Pagamento de boleto</h2>
             <h2 class="text">Demonstrativo do imposto de renda</h2>
-
         </div>
+        <br>
+        <input type="text" id="campo-texto" class="field_cpf" placeholder="CPF (Opcional)" aria-label="Search" aria-describedby="search-addon"/>
 
-        <input type="text" id="campo-texto" class="form-control rounded" placeholder="CPF" aria-label="Search" aria-describedby="search-addon" />
-
-        <button id='getData' class="btn-financeiro" onclick="GetData()">Emitir Senha</button>
+        <button id='getData' class="btn-financeiro" onclick="EmitirSenha('FCR')">Emitir Senha</button>
         
     </div>
 </body>
