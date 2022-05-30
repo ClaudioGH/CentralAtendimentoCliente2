@@ -1,0 +1,10 @@
+.setor{
+    text-align: center;
+}
+.field_cpf{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    width: 550px;
+}
