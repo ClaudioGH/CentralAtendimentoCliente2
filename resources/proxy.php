@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Proxy CORS
  * @author Wanderlei Silva do Carmo <wander.silva@gmail.com>
@@ -6,12 +7,14 @@
  * 
  */
 
+set_time_limit(10);
 
- // create & initialize a curl session
+
+// create & initialize a curl session
 $curl = curl_init();
 $dataAtendimento = $_REQUEST["proxyParm"];
 
-$uri = "https://central-atendimento-cliente.herokuapp.com/api/atendimentos/dia/".$dataAtendimento;
+$uri = "https://central-atendimento-cliente.herokuapp.com/api/atendimentos/dia/" . $dataAtendimento;
 // set our url with curl_setopt()
 curl_setopt($curl, CURLOPT_URL, $uri);
 
