@@ -1,42 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/resources/css/style.css">
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Telao</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="js/script.js"></script>
 
-</head>
-<body class="container">
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <img class="imagem" src="/resources/css/imagens/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-              </form>
-            </div>
-          </nav>
-
-    <div>
-        <h1 class="welcome">Bem-vindo</h1>
-    </div>
-    <div class="my-5">
-      <h2 class="">Unidade</h2>
-      <p class="">Visualize abaixo os modulos para sua unidade.</p>
-    </div>
-    <div class="icons">
-            <a href="/resources/views/atendimento.html"> <img src="/resources/css/imagens/Person.png" alt=""></a>
-            <a href="/resources/views/monitor.html"><img src="/resources/css/imagens/monitorzin.png"  alt=""></a>
-            <a href="/resources/views/triagem.html"><img src="/resources/css/imagens/impressorinha.png"  alt=""></a>
-            <a href="/resources/views/configuracao.html  "><img src="/resources/css/imagens/config.png"  alt=""></a>
-    </div>
-   
-
-</body>
-</html>
+    <body>
+        <div>
+            <header class="cabecalho">    
+            <img class="cabecalho-img" src="/css/imagens/logo_senai_novo.svg" alt="logo_senai">
+            </header>
+        <main>
+            <section class="senha-guiche">
+                <a class="senha"><strong>SENHA</strong>
+                <a class="guiche"><strong>GUICHÊ</strong>
+            </section>
+            <section class="numero-tabela">
+                <header class="vertical-line-2"></header>
+                <a id="senhaAtual" class="M-08" onclick="atualizarAatendimentoJS()">M-08</a>
+                <a class="N-02" >02</a>
+            </section>
+            <section class="senhas-anteriores">
+                <div class="linha-vertical"></div>
+                <a class="tabela-1">SENHAS ANTERIORES</a>
+                <a class="tabela-1">GUICHÊ</strong></a>
+            </section>
+            <section class="primeiro-numero">
+                <a class="n-1">M-08</a>
+                <a class="n-2">02</a>
+            </section>
+            <section class="segundo-numero">
+                <a class="n-3">F-05</a>
+                <a class="n-4">01</a>
+                
+            </section>
+            <section class="terceiro-numero">
+                <a class="n-5">Z-01</a>
+                <a class="n-6">03</a>
+                
+            </section>
+            
+            </main>
+        </div>
+    </body>
+</html> 
