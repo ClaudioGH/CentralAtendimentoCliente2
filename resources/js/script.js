@@ -152,3 +152,56 @@ function atendimentosqueueNext(){
         
 }
 
+function getEspera(){
+
+    itemLista = document.getElementById("proximo"); 
+    itemLista.innerHTML = ""
+
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue/next`
+    fetch(uri).then(r => r.json().then(r => {
+
+            console.log(r)
+            itemLista.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
+            itemLista.innerHTML += `<li class="list-group-item"> Data e Hora Emissao:  ${r.date_time_emissao_atendimento}</li>`
+            itemLista.innerHTML += `<li class="list-group-item"> Observacoes:  ${r.observacoes}</li>`
+            
+    }))
+
+}
+
+function getAtendimentos(){
+
+    atendido = document.getElementById("atendido"); 
+    atendido.innerHTML = " "
+
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue/next`
+    fetch(uri).then(r => r.json().then(r => {
+
+            console.log(r)
+            atendido.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
+            atendido.innerHTML += `<li class="list-group-item"> CPF:  ${r.cpf}</li>`
+            atendido.innerHTML += `<li class="list-group-item"> Data e Hora Emissao:  ${r.date_time_emissao_atendimento}</li>`
+            atendido.innerHTML += `<li class="list-group-item"> Observacoes:  ${r.observacoes}</li>`
+            
+    }))
+
+}
+
+function getProximos(){
+
+    fila = document.getElementById("fila_espera"); 
+    fila.innerHTML = " "
+
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue`
+    fetch(uri).then(r => r.json().then(r => {
+
+            console.log(r)
+            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
+            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
+            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
+            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
+            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
+            
+    }))
+
+}

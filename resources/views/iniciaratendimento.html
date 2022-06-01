@@ -23,7 +23,7 @@
 </head>
 
 
-<body class="container">
+<body class="container" onload="getAtendimentos()">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" id="home-tab" data-toggle="tab" href="/index.html" role="tab" aria-controls="home"
@@ -71,19 +71,21 @@
 
 
             <div class="col-md-9 mt-2">
-                <h3>Servico Realizado</h3>
-                <form>
+                <div>
+                    <ul id="atendido"></ul>
+                </div>
+                <h4 class="mx-4">Observações</h4>
+                <form class="mx-4">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Ensira o servico realizado</label>
+                        <label for="exampleInputEmail1">Insira as Observações</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Servico realizado">
-                        <small id="emailHelp" class="form-text text-muted">Por favor, insira o servico
-                            realizado.</small>
+                            placeholder="Observações">
+                        <small id="emailHelp" class="form-text text-muted">Por favor, insira as observações.</small>
                     </div>
                 </form>
 
                 <!-- Button to Open the Modal -->
-                <button type="button" class="btn btn-danger col-md-9 mt-5" data-bs-toggle="modal"
+                <button type="button" class="btn btn-danger col-md-9 mx-4 mt-5" data-bs-toggle="modal"
                     data-bs-target="#myModal">
                     Encerrar Atendimento</button>
 
