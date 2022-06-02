@@ -184,6 +184,19 @@ function getAtendimentos(){
             atendido.innerHTML += `<li class="list-group-item"> Observacoes:  ${r.observacoes}</li>`
             
     }))
+    
+    fila = document.getElementById("fila_espera"); 
+    fila.innerHTML = ""
+
+    const uris = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue`
+    fetch(uris).then(r => r.json().then(r => {
+
+        r.forEach(r1 => {
+            
+            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r1.numero_atendimento}${r1.sufixo_atendimento}</li>`
+        });
+            console.log(r)
+    }))
 
 }
 
@@ -195,13 +208,65 @@ function getProximos(){
     const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue`
     fetch(uri).then(r => r.json().then(r => {
 
+        r.forEach(r1 => {
+            
+            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r1.numero_atendimento}${r1.sufixo_atendimento}</li>`
+        });
             console.log(r)
-            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
-            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
-            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
-            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
-            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
+    }))
+
+}
+
+
+function getRequerimento(){
+
+    requerimento = document.getElementById("requerimento"); 
+    requerimento.innerHTML = " "
+
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue/next`
+    fetch(uri).then(r => r.json().then(r => {
+
+            console.log(r)
+            requerimento.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
+            requerimento.innerHTML += `<li class="list-group-item"> CPF:  ${r.cpf}</li>`
+            requerimento.innerHTML += `<li class="list-group-item"> Data e Hora da Emissao:  ${r.date_time_emissao_atendimento}</li>`
+            requerimento.innerHTML += `<li class="list-group-item"> Estado:  ${r.estado_fim_atendimento}</li>`
+            requerimento.innerHTML += `<li class="list-group-item"> Atendimento:  ${r.fim_atendimento}</li>`
+            requerimento.innerHTML += `<li class="list-group-item"> ID Atendimento:  ${r.id_atendimento}</li>`
+            requerimento.innerHTML += `<li class="list-group-item"> Observações:  ${r.observacoes}</li>`
             
     }))
 
 }
+
+function getNext(){
+
+    fila = document.getElementById("fila_espera"); 
+    fila.innerHTML = " "
+
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue`
+    fetch(uri).then(r => r.json().then(r => {
+
+        r.forEach(r1 => {
+            
+            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r1.numero_atendimento}${r1.sufixo_atendimento}</li>`
+        });
+            console.log(r)
+    }))
+
+    itemLista = document.getElementById("proximo"); 
+    itemLista.innerHTML = ""
+
+    const uris = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue/next`
+    fetch(uris).then(r => r.json().then(r => {
+
+            console.log(r)
+            itemLista.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
+            itemLista.innerHTML += `<li class="list-group-item"> Data e Hora Emissao:  ${r.date_time_emissao_atendimento}</li>`
+            itemLista.innerHTML += `<li class="list-group-item"> Observacoes:  ${r.observacoes}</li>`
+            
+    }))
+
+}
+
+
