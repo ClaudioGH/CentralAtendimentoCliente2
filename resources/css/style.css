@@ -109,3 +109,9 @@ btn-encerrar{
     background-position: center center;
     z-index: 999;
 }
+
+.config-subtitle{
+    background-color: rgb(194, 182, 182);
+    height: 30px;
+    border-radius: 6px;
+}

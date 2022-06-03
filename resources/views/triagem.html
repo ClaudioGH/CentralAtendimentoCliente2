@@ -17,7 +17,7 @@
 
 </head>
 
-<body class="container" onload="getRequerimento()">
+<body class="container">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" id="home-tab" data-toggle="tab" href="/index.html" role="tab" aria-controls="home"
@@ -45,12 +45,12 @@
     <h3 class="mt-5">TRIAGEM</h3>
   </div>
   <div class="input-group">
-    <input type="text" id="buscarSenha" class="form-control rounded" placeholder="Buscar senha" aria-label="Search" aria-describedby="search-addon" />
-    <button type="button" id="btn-buscar" class="btn btn-outline-success" onclick=""><i class="fa fa-search fa-fw"></i> Buscar</button>
+    <input type="search" id="buscar-triagem" class="form-control rounded" placeholder="Buscar senha" aria-label="Search" aria-describedby="search-addon" />
+    <button type="button" id="btn-buscar-triagem" class="btn btn-outline-success" ><i class="fa fa-search fa-fw"></i> Buscar</button>
   </div>
   <br>
   <div>
-    <ul id="requerimento">
+   <ul id="requerimento"></ul>
     </ul>
   </div>
   <br>
@@ -72,7 +72,7 @@
         <option>...</option>
       </select>
     </div>
-      <div class="form-group col-md-1">
+      <div class="form-group col-md-2">
         <label for="inputState">Sufixo Servico</label>
         <select id="inputState" class="form-control">
           <option selected>Selecione...</option>
@@ -85,7 +85,7 @@
     </div>
     </div>
     <br>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="button" id="btn-enviar-triagem" class="btn btn-primary">Enviar</button>
   </form>
 </body>
 <script type="text/javascript" src="/js/script.js"></script>
