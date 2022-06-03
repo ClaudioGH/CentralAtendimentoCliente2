@@ -108,6 +108,7 @@ function GetFila(){
          alert("Ocorreu um erro ao tentar selecionar os atendimentos do dia.")
          loader.classList.remove("progresso");
          btnBuscar.removeAttribute("disabled");
+         console.log(e);
     })
 
     
@@ -140,7 +141,7 @@ function atendimentosqueueNext(){
                 {
                     console.log( 'Looks like there was a problem. Status Code: ' +
                         response.status );
-                    return;
+                    return ;
                 }
                 console.log( response.headers.get( "Content-Type" ) );
                 return response.json();
@@ -174,7 +175,7 @@ function getAtendimentos(){
     atendido = document.getElementById("atendido"); 
     atendido.innerHTML = " "
 
-    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue/next`
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/queue/next`
     fetch(uri).then(r => r.json().then(r => {
 
             console.log(r)
@@ -257,14 +258,52 @@ function getNext(){
     itemLista = document.getElementById("proximo"); 
     itemLista.innerHTML = ""
 
+<<<<<<< HEAD
+    const uris = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/queue/next`
+=======
     const uris = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue/next`
+>>>>>>> af5424dcec9d461f763cfe473e4eb793313afe5a
     fetch(uris).then(r => r.json().then(r => {
 
             console.log(r)
             itemLista.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
             itemLista.innerHTML += `<li class="list-group-item"> Data e Hora Emissao:  ${r.date_time_emissao_atendimento}</li>`
             itemLista.innerHTML += `<li class="list-group-item"> Observacoes:  ${r.observacoes}</li>`
+<<<<<<< HEAD
             
+    }))
+
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", function(evt){
+    document.getElementById("btn-buscar-triagem").addEventListener("click", function(){
+        const id = document.getElementById("buscar-triagem")
+        buscarId(id.value)
+    })
+})
+
+const buscarId = function(id){
+
+    triagem = document.getElementById("requerimento")
+    triagem.innerHTML = " "
+
+=======
+>>>>>>> af5424dcec9d461f763cfe473e4eb793313afe5a
+            
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/id/${id}`
+    fetch(uri).then(r => r.json().then(r => {
+
+        requerimento.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
+        requerimento.innerHTML += `<li class="list-group-item"> CPF:  ${r.cpf}</li>`
+        requerimento.innerHTML += `<li class="list-group-item"> Data e Hora da Emissao:  ${r.date_time_emissao_atendimento}</li>`
+        requerimento.innerHTML += `<li class="list-group-item"> Estado:  ${r.inicio_atendimento}</li>`
+        requerimento.innerHTML += `<li class="list-group-item"> Atendimento:  ${r.fim_atendimento}</li>`
+        requerimento.innerHTML += `<li class="list-group-item"> ID Atendimento:  ${r.id_atendimento}</li>`
+        requerimento.innerHTML += `<li class="list-group-item"> Observações:  ${r.observacoes}</li>`
+
     }))
 
 }
