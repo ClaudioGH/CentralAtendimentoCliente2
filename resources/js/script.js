@@ -41,6 +41,8 @@ function EmitirSenha(sufixo_atendimento) {
         } );
 
 }
+
+
 function GetData() {
 
     //localStorage.setItem("senha", bot.value)

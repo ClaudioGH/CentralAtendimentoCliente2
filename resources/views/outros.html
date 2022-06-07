@@ -1,42 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="js/scripts.js"></script>
-    
-    <link rel="stylesheet" href="css/style.css">
-    
-    <title>Outros Serviços</title>
+    <script src="../js/script.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <title>OUTROS</title>
 </head>
-<body>
 
-    <div class="container">
+<body class="container">
+
+    <div class="logo_senai">
 
         <div class="d-flex  justify-content-center  align-items-center w-100 my-5">
-
-            
-                <a href="/tela.html" class="d-flex jutify-center"><i class="icone-seta">⇽</i></a>
-                <img src="/img/download.png"  class="img-thumbnail" alt="">
-            
-            
+            <img src="../img/logo_senai_novo.svg" alt="logo_senai.svg">
+        </div>
+        <div class="voltar">
+            <a href="../index.html"><img src="../img/de-volta.png" class=""></a>
         </div>
 
-        <div class="cont-text">
-            <h2 class="text">Qualquer tipo de informação</h2>
-            <h2 class="text">Divulgação de estágio</h2>
-            <h2 class="text">Reservas de salas/auditórios</h2>
-        </div>
-
-        <br>
-        <input type="text" id="campo-texto" class="field_cpf" placeholder="CPF (Opcional)" aria-label="Search" aria-describedby="search-addon"/>
-
-        <button id='getData' class="btn-financeiro" onclick="EmitirSenha('OTS')">Emitir Senha</button>
         
+
+        <div class="setor">
+            <h1>OUTROS SERVIÇOS</h1>
+            <p class="md-5">Selecione os serviços desejados:</p>
+
+        </div>
+        <br>
+        <div class="box">
+
+            <div class="box-opt">
+                <label for="opt1">
+                    <input type="checkbox" value="opcao1" name="opt" id="opt1">
+                    Agendamento de Salas/Auditórios
+                </label>
+            </div>
+
+            <div class="box-opt">
+                <label for="opt2">
+                    <input type="checkbox" value="opcao2" name="opt" id="opt2">
+                    Divulgação de Estágios
+                </label>
+            </div>
+
+            <div class="box-opt">
+                <label for="opt3">
+                    <input type="checkbox" value="opcao3" name="opt" id="opt3">
+                    Localização de Sala/Instrutor
+                </label>
+            </div>
+
+            <!-- <div class="box-btns"> -->
+            <!-- <button class="btn btn-primary" id="emitir-senha">Emitir Senha</button> -->
+            <!-- </div> -->
+
+        </div>
+
+
+    </div>
+    <br>
+
+    <input type="text" id="campo-texto" class="field_cpf" placeholder="CPF (Opcional)" aria-label="Search"
+        aria-describedby="search-addon" />
+    <button id='getData' class="btn-emitirsenha" onclick="EmitirSenha('FCR')">Emitir Senha</button>
     </div>
 </body>
+
 </html>
