@@ -305,3 +305,16 @@ const buscarId = function(id){
 }
 
 
+function setGuiche(){
+
+    teste = document.getElementById("guiche")
+    teste.innerHTML = " "
+
+    var select = document.getElementById('guicheId');
+	var text = select.options[select.selectedIndex].text;
+	console.log(text);
+
+    teste.innerHTML += `<h1 class="numero">${text}</h1>`
+
+}
+ 
