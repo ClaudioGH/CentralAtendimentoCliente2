@@ -258,18 +258,21 @@ function getNext(){
     itemLista = document.getElementById("proximo"); 
     itemLista.innerHTML = ""
 
+
     const uris = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/queue/next`
+
+
     fetch(uris).then(r => r.json().then(r => {
 
             console.log(r)
             itemLista.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
             itemLista.innerHTML += `<li class="list-group-item"> Data e Hora Emissao:  ${r.date_time_emissao_atendimento}</li>`
             itemLista.innerHTML += `<li class="list-group-item"> Observacoes:  ${r.observacoes}</li>`
+
             
     }))
 
 }
-
 
 
 

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f14d9d10c3c3d1191a82685348064b0212589a7
 <div class="col-md-9 mt-2">
         <div class="">
           <table class="table table-striped">
@@ -61,3 +65,41 @@ const buscarId = function(id){
     }))
 
 }
+<<<<<<< HEAD
+=======
+=======
+<div class="col-md-9 mt-2">
+        <div class="">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Senha</th>
+                <th scope="col">Servico</th>
+                <th scope="col">Prioridade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>M0020</td>
+                <td>Matricula</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>A0039</td>
+                <td>Atestado</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>A0038</td>
+                <td>Atestado</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+>>>>>>> af5424dcec9d461f763cfe473e4eb793313afe5a
+>>>>>>> 1f14d9d10c3c3d1191a82685348064b0212589a7
