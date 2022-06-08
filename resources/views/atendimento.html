@@ -53,21 +53,23 @@
 
         <div class="boxG p-2">
           <h5>Guichê</h5>
-          <h1 class="numero" id="guiche">1</h1>
-
+          <h1 class="numero" id="guiche"></h1>
+          <div class="alterar-box">
           <select class="form-control" id="guicheId">
             <option value="0">Alterar:</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
+          <button type="button" class="btn btn-dark btn-sm" onclick="setGuiche()">Ok</button>
+          </div>
 
         </div>
 
       </div>
 
       <div class="col-md-9 mt-2">
-        <button class="btn-block btn-chamar" onclick="setGuiche()"><i class="fas  fa-bullhorn fa-fw"></i> Chamar proximo</button>
+        <button class="btn-block btn-chamar" onclick="chamarSenha()"><i class="fas  fa-bullhorn fa-fw"></i> Chamar proximo</button>
       </div>
 
     </div>

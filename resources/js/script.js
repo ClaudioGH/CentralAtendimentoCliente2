@@ -1,4 +1,19 @@
 
+function setGuiche(){
+
+    const teste = document.getElementById("guiche")
+    teste.innerHTML = " "
+
+    const select = document.getElementById('guicheId');
+	text = select.options[select.selectedIndex].text;
+    const idGuiche = text
+	console.log(text);
+
+    teste.innerHTML = `<h1 class="numero">${idGuiche}</h1>`
+
+}
+
+
 function chamarSenha(){
     location.href = "atdandamento.html"
 }
@@ -272,49 +287,9 @@ function getNext(){
             
     }))
 
-}
-
-
-
-document.addEventListener("DOMContentLoaded", function(evt){
-    document.getElementById("btn-buscar-triagem").addEventListener("click", function(){
-        const id = document.getElementById("buscar-triagem")
-        buscarId(id.value)
-    })
-})
-
-const buscarId = function(id){
-
-    triagem = document.getElementById("requerimento")
-    triagem.innerHTML = " "
-
-            
-    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/id/${id}`
-    fetch(uri).then(r => r.json().then(r => {
-
-        requerimento.innerHTML += `<li class="list-group-item"> Senha:  ${r.numero_atendimento}${r.sufixo_atendimento}</li>`
-        requerimento.innerHTML += `<li class="list-group-item"> CPF:  ${r.cpf}</li>`
-        requerimento.innerHTML += `<li class="list-group-item"> Data e Hora da Emissao:  ${r.date_time_emissao_atendimento}</li>`
-        requerimento.innerHTML += `<li class="list-group-item"> Estado:  ${r.inicio_atendimento}</li>`
-        requerimento.innerHTML += `<li class="list-group-item"> Atendimento:  ${r.fim_atendimento}</li>`
-        requerimento.innerHTML += `<li class="list-group-item"> ID Atendimento:  ${r.id_atendimento}</li>`
-        requerimento.innerHTML += `<li class="list-group-item"> Observações:  ${r.observacoes}</li>`
-
-    }))
+    teste.innerHTML
 
 }
 
 
-function setGuiche(){
-
-    teste = document.getElementById("guiche")
-    teste.innerHTML = " "
-
-    var select = document.getElementById('guicheId');
-	var text = select.options[select.selectedIndex].text;
-	console.log(text);
-
-    teste.innerHTML += `<h1 class="numero">${text}</h1>`
-
-}
  

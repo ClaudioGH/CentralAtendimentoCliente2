@@ -43,6 +43,10 @@
     font-size: 130px;
 }
 
+.alterar-box{
+    display: flex;
+}
+
 
 .chamar{
     display: block;
