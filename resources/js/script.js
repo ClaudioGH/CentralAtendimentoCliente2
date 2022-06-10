@@ -50,3 +50,23 @@ function atualizarAatendimentoJS(){
             } );
 }
 
+function fila(){
+    const primeiraFila = document.getElementById("primeiroFila");
+    primeiraFila.innerHTML = "";
+
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/queue_next`
+    fetch(uri).then(r=>r.json().then(r => {
+        primeiraFila.innerHTML += `<a class="n-1">${r.numero_atendimento}${r.sufixo_atendimento}</a>` + `<a class="n-2">${r.numero_atendimento}</a>`
+    }))
+}
+
+function callNext(){
+    call = document.getElementById("senhaAtual");
+    call.innerHTML = "";
+
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/to_call_next`
+
+    fetch(uri).then(r=>r.json().then(r=>{
+        call.innerHTML += `<a id="senhaAtual" class="senhaTelao">${r.numero_atendimento} - ${r.sufixo_atendimento}</a>`
+    }))
+}
