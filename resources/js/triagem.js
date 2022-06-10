@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function(evt){
     document.getElementById("btn-buscar-triagem").addEventListener("click", function(){
         const id = document.getElementById("buscar-triagem")
@@ -23,5 +24,7 @@ const buscarId = function(id){
         requerimento.innerHTML += `<li class="list-group-item"> Observações:  ${r.observacoes}</li>`
 
     }))
-
+ 
 }
+
+

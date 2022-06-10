@@ -14,7 +14,7 @@ function setGuiche(){
 }
 
 
-function chamarSenha(){
+function chamarTela(){
     location.href = "atdandamento.html"
 }
 
@@ -226,7 +226,7 @@ function getProximos(){
 
         r.forEach(r1 => {
             
-            fila.innerHTML += `<li class="list-group-item"> Senha:  ${r1.numero_atendimento}${r1.sufixo_atendimento}</li>`
+        fila.innerHTML += `<li class="list-group-item"> Senha:  ${r1.numero_atendimento}${r1.sufixo_atendimento}</li>`
         });
             console.log(r)
     }))
@@ -293,3 +293,6 @@ function getNext(){
 
 
  
+function chamarSenha(){
+
+}
