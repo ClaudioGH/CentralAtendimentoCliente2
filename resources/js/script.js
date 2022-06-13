@@ -54,9 +54,13 @@ function fila(){
     const primeiraFila = document.getElementById("primeiroFila");
     primeiraFila.innerHTML = "";
 
-    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/queue_next`
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue`
     fetch(uri).then(r=>r.json().then(r => {
-        primeiraFila.innerHTML += `<a class="n-1">${r.numero_atendimento}${r.sufixo_atendimento}</a>` + `<a class="n-2">${r.numero_atendimento}</a>`
+       r.forEach(r1=> {
+
+        primeiraFila.innerHTML += `<li class="list-group-item">${r1.numero_atendimento}${r1.sufixo_atendimento}</li>` + `<li class="n2">${r1.numero_atendimento}</li>`
+           
+       });
     }))
 }
 
