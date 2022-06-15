@@ -173,7 +173,7 @@ function getEspera(){
     itemLista = document.getElementById("proximo"); 
     itemLista.innerHTML = ""
 
-    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue/next`
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue_next`
     fetch(uri).then(r => r.json().then(r => {
 
             console.log(r)
@@ -190,7 +190,7 @@ function getAtendimentos(){
     atendido = document.getElementById("atendido"); 
     atendido.innerHTML = " "
 
-    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/queue/next`
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/queue_next`
     fetch(uri).then(r => r.json().then(r => {
 
             console.log(r)
@@ -239,7 +239,7 @@ function getRequerimento(){
     requerimento = document.getElementById("requerimento"); 
     requerimento.innerHTML = " "
 
-    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue/next`
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue_next`
     fetch(uri).then(r => r.json().then(r => {
 
             console.log(r)
@@ -274,7 +274,7 @@ function getNext(){
     itemLista.innerHTML = ""
 
 
-    const uris = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/queue/next`
+    const uris = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/queue_next`
 
 
     fetch(uris).then(r => r.json().then(r => {
@@ -287,7 +287,6 @@ function getNext(){
             
     }))
 
-    teste.innerHTML
 
 }
 
