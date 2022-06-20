@@ -1,4 +1,3 @@
-
 function myFunction(){
     location.href = "/atdandamento.html"
 }
@@ -52,13 +51,21 @@ function atualizarAatendimentoJS(){
 
 function fila(){
     const primeiraFila = document.getElementById("primeiroFila");
-    primeiraFila.innerHTML = "";
+    primeiraFila.innerHTML = `
+        <tr>
+        <th class="tabela-1">SENHAS ANTERIORES</th>
+        <th class="tabela-1"onclick="callNext()">GUICHÊ</strong></th> 
+        <tr>
+        </tr>`
 
     const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue`
     fetch(uri).then(r=>r.json().then(r => {
        r.forEach(r1=> {
 
-        primeiraFila.innerHTML += `<li class="list-group-item">${r1.numero_atendimento}${r1.sufixo_atendimento}</li>` + `<li class="n22">${r1.numero_atendimento}</li>`
+        primeiraFila.innerHTML += `
+        <th class="tabela-1">${r1.numero_atendimento}${r1.sufixo_atendimento}</th>` + `<th class="tabela-2">${r1.numero_atendimento}</th>
+        </tr>`
+           
        });
     }))
 }

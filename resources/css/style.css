@@ -47,6 +47,7 @@ body{
 .senhaTelao{
     padding-right: 29%;
 }
+
 .senhas-anteriores{
     padding: 12px;
     padding-left: 13%;
@@ -55,8 +56,9 @@ body{
     color: dimgrey;
 }
 .tabela-1{
- padding-right: 27%;
-    /*text-align: center;*/
+    padding-right: 27%;
+    justify-content: center;
+    
 }
 .linha-vertical{
     border-left: 6px solid #d6d3d3c2;
@@ -108,15 +110,9 @@ body{
     padding-left: 68%;
 }
 
-.n22{
-    display: flex;
-    justify-content: right;
-    
-}
-
-/* INFORMACOES DA FILA */
-.primeiro-numero{
-    list-style: none;
+.tabela-2{
+    justify-content: center;
+    align-items: center;
 }
 
 
