@@ -108,6 +108,17 @@ body{
     padding-left: 68%;
 }
 
+.n22{
+    display: flex;
+    justify-content: right;
+    
+}
+
+/* INFORMACOES DA FILA */
+.primeiro-numero{
+    list-style: none;
+}
+
 
 @keyframes piscarNumero {
     from { color: yellow; }
