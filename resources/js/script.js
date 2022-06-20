@@ -49,3 +49,35 @@ function atualizarAatendimentoJS(){
                 console.log( 'Fetch Error :-S', err );
             } );
 }
+
+function fila(){
+    const primeiraFila = document.getElementById("primeiroFila");
+    primeiraFila.innerHTML = `
+        <tr>
+        <th class="tabela-1">SENHAS ANTERIORES</th>
+        <th class="tabela-1"onclick="callNext()">GUICHÊ</strong></th> 
+        <tr>
+        </tr>`
+
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimentos/queue`
+    fetch(uri).then(r=>r.json().then(r => {
+       r.forEach(r1=> {
+
+        primeiraFila.innerHTML += `
+        <th class="list-group-item">${r1.numero_atendimento}${r1.sufixo_atendimento}</th>` + `<th class="n2">${r1.numero_atendimento}</th>
+        </tr>`
+           
+       });
+    }))
+}
+
+function callNext(){
+    call = document.getElementById("senhaAtual");
+    call.innerHTML = "";
+
+    const uri = `https://central-atendimento-cliente.herokuapp.com/api/atendimento/to_call_next`
+
+    fetch(uri).then(r=>r.json().then(r=>{
+        call.innerHTML += `<a id="senhaAtual" class="senhaTelao">${r.numero_atendimento} - ${r.sufixo_atendimento}</a>`
+    }))
+}

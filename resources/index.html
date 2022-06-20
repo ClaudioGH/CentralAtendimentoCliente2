@@ -5,16 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Telao</title>
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/style.css">
+        
     </head>
 
-    <script src="index.js"></script>
     <script src="js/script.js"></script>
 
-    <body>
+    <body onload="fila()">
+
         <div>
             <header class="cabecalho">    
-            <img class="cabecalho-img" src="/css/imagens/logo_senai_novo.svg" alt="logo_senai">
+            <img class="cabecalho-img" src="/img/logo_senai_branco.png" alt="logo_senai">
             </header>
         <main>
             <section class="senha-guiche">
@@ -23,28 +24,16 @@
             </section>
             <section class="numero-tabela">
                 <header class="vertical-line-2"></header>
-                <a id="senhaAtual" class="M-08" onclick="atualizarAatendimentoJS()">00-OTS</a>
-                <a class="N-02" >02</a>
+                <a id="senhaAtual" class="senhaTelao">M-08</a>
+                <a class="guicheTelao" id="nmrGuiche">02</a>
             </section>
-            <section class="senhas-anteriores">
-                <div class="linha-vertical"></div>
-                <a class="tabela-1">SENHAS ANTERIORES</a>
-                <a class="tabela-1">GUICHÊ</strong></a>
-            </section>
-            <section class="primeiro-numero">
-                <a class="n-1">M-08</a>
-                <a class="n-2">02</a>
-            </section>
-            <section class="segundo-numero">
-                <a class="n-3">F-05</a>
-                <a class="n-4">01</a>
-                
-            </section>
-            <section class="terceiro-numero">
-                <a class="n-5">Z-01</a>
-                <a class="n-6">03</a>
-                
-            </section>
+
+            <table class="primeiro-numero" id="primeiroFila">
+                <tr>
+                    <th class="tabela-1">SENHAS ANTERIORES</th>
+                    <th class="tabela-1"onclick="callNext()">GUICHÊ</strong></th> 
+                </tr>
+            </table>
             
             </main>
         </div>
