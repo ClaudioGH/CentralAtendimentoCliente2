@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(evt){
 
 const buscarDia = function(dia){
 
-    monitor = document.getElementById("progresso")
+    monitor = document.getElementById("fila-espera")
     monitor.innerHTML = " "
 
             

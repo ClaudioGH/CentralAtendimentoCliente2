@@ -1,3 +1,29 @@
+function navbar(){
+    nav = document.getElementById("myTab")
+    nav.innerHTML = " "
+  
+    nav.innerHTML += `<li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="../index.html" role="tab" aria-controls="home" aria-selected="true">
+      <img src="https://senaies.com.br/wp-content/uploads/2019/11/logo_senai_novo.svg" alt="Senai - ES" class="logo-img" style="height: 32px"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="views/atendimento.html" role="tab" aria-controls="profile"
+      aria-selected="false">Atendimento</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="views/monitor.html" role="tab" aria-controls="contact"
+      aria-selected="false">Monitor</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="views/triagem.html" role="tab" aria-controls="contact"
+      aria-selected="false">Triagem</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="views/configuracao.html" role="tab" aria-controls="contact"
+      aria-selected="false">Configuracao</a>
+  </li>`
+  }
+
 
 function setGuiche(){
 
@@ -75,6 +101,7 @@ function GetData() {
         {
             console.log( 'Fetch Error :-S', err );
         } );
+
 }
 
 
@@ -186,7 +213,6 @@ function getEspera(){
 }
 
 function getAtendimentos(){
-
     atendido = document.getElementById("atendido"); 
     atendido.innerHTML = " "
 
@@ -213,7 +239,6 @@ function getAtendimentos(){
         });
             console.log(r)
     }))
-
 }
 
 function getProximos(){
@@ -252,7 +277,6 @@ function getRequerimento(){
             requerimento.innerHTML += `<li class="list-group-item"> Observações:  ${r.observacoes}</li>`
             
     }))
-
 }
 
 function getNext(){
@@ -286,8 +310,6 @@ function getNext(){
 
             
     }))
-
-
 }
 
 

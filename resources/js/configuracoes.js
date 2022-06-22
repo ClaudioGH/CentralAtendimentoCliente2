@@ -30,4 +30,5 @@ const selecionarSetor = function(value){
           </div>`
     }) )
 
+    function navbar()
 }
